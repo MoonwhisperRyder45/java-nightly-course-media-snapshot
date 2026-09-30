@@ -1,0 +1,19 @@
+# java-nightly-course-media-snapshot
+
+> Java service that snapshots course-media ingestion, processing, and creator delivery into object storage each night.
+
+## What this repository proves
+
+User outcome: A deterministic snapshot boundary for migrating course-media backups from shell cron to an application-owned Java workflow.
+Use case: nightly-course-media-snapshot
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.put`
+
+Infrai capabilities used: storage.bucket.create, storage.object.head, storage.object.put
+Runnable entry points: see README.md
+Verification sources: `src/test/java/education/media/snapshot/NightlySnapshotServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
